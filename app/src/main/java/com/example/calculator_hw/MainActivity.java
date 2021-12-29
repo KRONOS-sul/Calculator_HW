@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
     private TextView tv_result;
-    private Integer first, second;
+    private double first, second;
     private Boolean isClickOperation = false;
     private String operation;
 
@@ -74,41 +76,61 @@ public class MainActivity extends AppCompatActivity {
     public void onClickOperation(View view) {
         switch (view.getId()) {
             case R.id.btn_plus:
-                first = Integer.parseInt(tv_result.getText().toString());
+                first = Double.parseDouble(tv_result.getText().toString());
                 isClickOperation = true;
                 operation = "+";
                 break;
 
             case  R.id.btn_minus:
-                first = Integer.parseInt(tv_result.getText().toString());
+                first = Double.parseDouble(tv_result.getText().toString());
                 isClickOperation = true;
                 operation = "-";
+                break;
 
             case R.id.btn_divide:
-                first = Integer.parseInt(tv_result.getText().toString());
+                first = Double.parseDouble(tv_result.getText().toString());
                 isClickOperation = true;
                 operation = "/";
+                break;
 
             case  R.id.btn_multiply:
-                first = Integer.parseInt(tv_result.getText().toString());
+                first = Double.parseDouble(tv_result.getText().toString());
                 isClickOperation = true;
                 operation = "*";
+                break;
 
             case R.id.btn_equal:
-                second = Integer.parseInt(tv_result.getText().toString());
-                Integer result = 0;
+                second = Double.parseDouble(tv_result.getText().toString());
+                Double result = Double.valueOf(0);
                 switch (operation){
                     case "+":
                         result = first + second;
+                        break;
                     case "-":
                         result = first - second;
+                        break;
                     case "*":
                         result = first * second;
+                        break;
                     case "/":
                         result = first / second;
+                        break;
                 }
                 tv_result.setText(result.toString());
                 isClickOperation = true;
+                break;
+
+            case R.id.btn_percent:
+                Double result1 = Double.valueOf(0);
+                first = Double.parseDouble(tv_result.getText().toString());
+                isClickOperation = true;
+                operation = "/";
+                switch (operation){
+                    case "/":
+                    result1 = first / 100;
+                    break;
+                }
+                tv_result.setText(new DecimalFormat("##.######").format(result1));
                 break;
         }
     }
