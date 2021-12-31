@@ -22,19 +22,19 @@
 
         <TextView
            style="@style/Text.View"
-            android:text="Policy"/>
+            android:text="@string/policy"/>
 
         <TextView
             style="@style/Text.View"
-            android:text="Product Category"/>
+            android:text="@string/product_category"/>
 
         <TextView
             style="@style/Text.View"
-            android:text="Origin Country"/>
+            android:text="@string/origin_country"/>
 
         <TextView
             style="@style/Text.View"
-            android:text="Brand"/>
+            android:text="@string/brand"/>
 
     </LinearLayout>
 
@@ -46,7 +46,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="15dp"
-        android:text="Policies"
+        android:text="@string/policies"
         android:textColor="@color/purple_300"
         android:textSize="30sp"/>
 
@@ -54,7 +54,7 @@
         android:id="@+id/getting_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Here Is Number"
+        android:text="@string/here_is_number"
         android:textSize="35sp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/explode"
@@ -71,7 +71,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:cornerRadius="10dp"
         android:backgroundTint="@color/red"
-        android:text="Explode"
+        android:text="@string/explode"
         android:textSize="20sp"
         android:paddingVertical="15dp"
         android:layout_marginBottom="60dp"/>
