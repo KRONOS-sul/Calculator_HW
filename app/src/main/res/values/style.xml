@@ -39,6 +39,6 @@
     </style>
 
     <style name="splash_screen" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
-        <item name="android:windowBackground">@drawable/gradic</item>
+        <item name="android:windowBackground">@color/splash_bg2</item>
     </style>
 </resources>
