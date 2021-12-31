@@ -27,4 +27,14 @@
         <item name="android:backgroundTint">@color/orange</item>
     </style>
 
+    <style name="Text.View" parent="Text.View" tools:ignore="ResourceCycle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/purple_300</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:background">@drawable/round_contour</item>
+        <item name="android:paddingVertical" tools:targetApi="o">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>
